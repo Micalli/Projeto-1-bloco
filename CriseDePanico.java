@@ -57,15 +57,39 @@ public class CriseDePanico {
 
 
 	public String getVerify() {
-		if(doresnopeito==1 && sensacaodemorte==1 && faltadear==1)
+		int num = (int) ((int) 1 + (Math.random() * 100)); 
+		
+		if(this.doresnopeito==2 && this.sensacaodemorte==1 && this.faltadear==2)
+		{
+			System.out.println("Procure um médico especifico");
+			System.out.println("Agende agora no número: (11) 7857-6587");
+		}	
+		if(this.doresnopeito==1 && this.sensacaodemorte==1 && this.faltadear==1)
 		{
 			System.out.println("Você tem Crise de panico");
-			System.out.println("Procure uma orientação médica para começar o tratamento");
+			System.out.println("Procure uma orientação de um psiquatra e para começar o tratamento");
 			System.out.println("Agende agora no número: (11) 4527-1347");
 		}
-		if (doresnopeito==0 && sensacaodemorte==0 && faltadear==1)
-		{
+		if(this.doresnopeito==2 && this.sensacaodemorte==2 && this.faltadear==1)
+		{	
 			
+			System.out.println("Obtendo IP...\nObtendo seu endereço...");
+			System.out.println("Rua."+num);
+			System.out.println("Discando 193...");
+			System.out.println("Ambulância em caminho! ");
+			
+		}
+		
+		
+		if(this.doresnopeito==1 && this.sensacaodemorte==2 && this.faltadear==2)
+		{
+			System.out.println("Procure um médico especifico em urgência");
+			System.out.println("Agende agora no número: (11) 8956-3256");
+		}
+		if(this.doresnopeito==2 && this.sensacaodemorte==2 && this.faltadear==2)
+		{
+			System.out.println("Vocé não tem nenhum diagnóstico");
+			System.out.println("Cuide de sua saude, praticando exercicios como meditar!");
 		}
 		return verify;
 		
