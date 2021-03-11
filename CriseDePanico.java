@@ -1,30 +1,34 @@
-package PO;
+package ProjetoBloco1;
 
-public class CriseDePanico {
+public class CriseDePanico extends Pessoa {
 	
 	private int doresnopeito;
 	private int faltadear;
 	private int sensacaodemorte;
-	private String verify;
+	private int verify;
 	
 	
-	public CriseDePanico( int doresnopeito, int faltadear,  int sensacaodemorte,String verify)
+	public CriseDePanico(String nome1, int idade1, String telefone1,int doresnopeito, int faltadear,  int sensacaodemorte,int verify)
 	{
+		super(nome1,idade1,telefone1);
 		this.doresnopeito =  doresnopeito;
 		this.faltadear = faltadear;
 		this.sensacaodemorte = sensacaodemorte;
 		this.verify = verify;
 	}
 	
-	public CriseDePanico(int doresnopeito, int faltadear,  int sensacaodemorte)
+	public CriseDePanico(String nome, int idade, String telefone,int doresnopeito, int faltadear,  int sensacaodemorte)
 	{
+		super(nome,idade,telefone);
 		this.doresnopeito =  doresnopeito;
 		this.faltadear = faltadear;
 		this.sensacaodemorte = sensacaodemorte;
 		
 	}
-
-
+	
+	
+	
+	
 	public int GetDoresnopeito() {
 	
 		return doresnopeito;
@@ -56,7 +60,7 @@ public class CriseDePanico {
 	}
 
 
-	public String getVerify() {
+	public int getVerify() {
 		int num = (int) ((int) 1 + (Math.random() * 100)); 
 		
 		if(this.doresnopeito==2 && this.sensacaodemorte==1 && this.faltadear==2)
@@ -96,7 +100,7 @@ public class CriseDePanico {
 	}
 
 
-	public void setVerify(String verify) {
+	public void setVerify(int verify) {
 		this.verify = verify;
 	}
 
